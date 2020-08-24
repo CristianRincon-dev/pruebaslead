@@ -1,0 +1,82 @@
+{
+	"info": {
+		"_postman_id": "7b07ced1-a905-476b-b806-0307914e8ed0",
+		"name": "pruebaLead",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://jsonplaceholder.typicode.com/ ",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "bfd7eb3a-771d-48d6-9cf3-8027437c1a8f",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{urlAPI}}",
+					"host": [
+						"{{urlAPI}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": ".2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{urlAPI}}/guide.html",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2ce4c6aa-802f-4801-bce6-6430b5ecc026",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{urlAPI}}/guide.html",
+					"host": [
+						"{{urlAPI}}"
+					],
+					"path": [
+						"guide.html"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
